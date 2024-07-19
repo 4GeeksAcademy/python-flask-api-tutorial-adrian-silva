@@ -20,7 +20,7 @@ def add_new_todo():
 
 @app.route('/todos/<int:position>', methods=['DELETE'])
 def delete_todo(position):
-    removed_todo = todos.pop(position)
+    todos.pop(position)
     return jsonify(todos), 200
 
 if __name__ == '__main__':
